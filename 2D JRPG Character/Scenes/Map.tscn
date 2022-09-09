@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Scenes/Charas/BasicChara/BasicChara.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/Charas/BasicStaticWalkChara/BasicStaticWalkChara.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/Charas/BasicWalkChara/BasicCharaWalk.tscn" type="PackedScene" id=3]
+
+[node name="Map" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+current = true
+zoom = Vector2( 0.5, 0.5 )
+
+[node name="YSort" type="YSort" parent="."]
+
+[node name="BasicChara" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( -56, -59 )
+
+[node name="BasicCharaWalk" parent="YSort" instance=ExtResource( 2 )]
+position = Vector2( 60, -53 )
+
+[node name="BasicCharaWalk2" parent="YSort" instance=ExtResource( 3 )]
+position = Vector2( -1, 35 )
